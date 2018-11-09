@@ -1,0 +1,134 @@
+body {
+	margin: 0px;
+	font-family: sans-serif;
+	padding: 0px
+	width: 1366px;
+}
+
+.cabecalho {
+	background-image:  url(https://images.wallpaperscraft.com/image/skyscrapers_road_evening_120636_1366x768.jpg);
+	width: 1366px;
+	height: 500px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.cabecalho h1 {
+	margin: 0px;
+	padding: 0px;
+	color: lightgray;
+	position: absolute;
+	top: 430px;
+	left: 493px;
+	height: 35px;
+	width: 370px;
+	border: 5px solid lightgray;
+
+}
+
+.menu {
+	background-color: #283A3A;
+	opacity: 0.3; 
+}
+
+.menu ul {
+    padding:0px;
+    margin:0px;
+    list-style:none;
+	height: 40px;
+}
+
+.menu ul li {
+	display: inline-block;
+	color: lightgray;
+}
+
+.menu ul li a {
+	display: inline-block;
+	border-bottom: 3px solid #283A3A;
+	color: lightgray;
+	padding: 0px 10px;
+	text-decoration: none;
+	line-height: 37px;
+}
+
+.menu ul li a:hover {
+    color: lightgray;
+    border-bottom: 1px solid #4C4C53;
+}
+
+.box1 {
+	float: left;
+	width: 30%;
+	margin-left: 0%;
+	padding: 0px;
+	color: #3D3D3D;
+}
+
+.box2 {
+	float: left;
+	width: 40%;
+	margin: 0px;
+	padding: 0px;
+	color: #3D3D3D;
+}
+
+.box3 {
+	padding: 0px;
+	float: left;
+	width: 30%;
+	color: #3D3D3D;
+}
+
+.checkin {
+	background-color: #FFFFFF;
+}
+.fazemos {
+	margin: 0px;
+	padding: 0px;
+}
+.fazemos h2 {
+	width: 1366px;
+	height: 45px;
+	color: #3D3D3D;
+}
+
+#key {
+	font-size: 120px;
+	color: orange;
+}
+
+.checkin p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.consul p {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.limp p {
+	margin: 0px;
+	padding: 0px;
+}
+
+#magic {
+	font-size: 120px;
+	color: orange;
+}
+
+#gift {
+	font-size: 120px;
+	color: orange;
+}
+
+.bigb {
+	margin: 0px;
+	padding: 0px;
+	border-right-width: 150px;
+	border-left-width: 150px;
+	width: 1066px;
+	height: 314px;
+}
