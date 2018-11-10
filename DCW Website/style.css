@@ -1,16 +1,15 @@
 body {
 	margin: 0px;
 	font-family: sans-serif;
-	padding: 0px
-	width: 1366px;
+	padding: 0px;
 }
 
 .cabecalho {
 	background-image:  url(https://images.wallpaperscraft.com/image/skyscrapers_road_evening_120636_1366x768.jpg);
-	width: 1366px;
 	height: 500px;
 	margin: 0px;
 	padding: 0px;
+	border-bottom: 5px solid lightgray;
 }
 
 .cabecalho h1 {
@@ -23,7 +22,7 @@ body {
 	height: 35px;
 	width: 370px;
 	border: 5px solid lightgray;
-
+	
 }
 
 .menu {
@@ -62,7 +61,7 @@ body {
 	width: 30%;
 	margin-left: 0%;
 	padding: 0px;
-	color: #3D3D3D;
+	color: lightgray;
 }
 
 .box2 {
@@ -70,27 +69,29 @@ body {
 	width: 40%;
 	margin: 0px;
 	padding: 0px;
-	color: #3D3D3D;
+	color: lightgray;
 }
 
 .box3 {
 	padding: 0px;
 	float: left;
 	width: 30%;
-	color: #3D3D3D;
+	color: lightgray;
 }
 
-.checkin {
-	background-color: #FFFFFF;
-}
 .fazemos {
 	margin: 0px;
 	padding: 0px;
+	color: lightgray;
+	background-color: #283A3A;
+	border-bottom: 5px solid lightgray;
 }
+
 .fazemos h2 {
-	width: 1366px;
 	height: 45px;
-	color: #3D3D3D;
+	color: lightgray;
+	margin: 0px;
+	padding: 0px;
 }
 
 #key {
@@ -129,6 +130,160 @@ body {
 	padding: 0px;
 	border-right-width: 150px;
 	border-left-width: 150px;
-	width: 1066px;
 	height: 314px;
+}
+
+.bigb2 {
+	margin:0px;
+	padding: 0px;
+	border-right-width: 150px;
+	border-left-width: 150px;
+	height: 275px;
+}
+
+.perfil {
+	margin: 0px;
+	padding: 0px;
+	background-color: #283A3A;
+	color: lightgray;
+	border-bottom: 5px solid lightgray;
+}
+
+.perfil h2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.icon1 {
+	font-size: 120px;
+	color: orange;
+}
+
+.perfilbox {
+	width: 40%;
+	margin: 0px;
+	padding: 0px;
+}
+
+button.css3button {
+	font-family: sans-serif;
+	font-size: 14px;
+	color: #f7f7f7;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#403e3b 0%,
+		#3b3a36 25%,
+		#2e2a29);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#403e3b),
+		color-stop(0.25, #3b3a36),
+		to(#2e2a29));
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #383532;
+	-moz-box-shadow:
+		0px 1px 3px rgba(51,47,51,0.5),
+		inset 0px -1px 0px rgba(54,50,54,0.7);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(51,47,51,0.5),
+		inset 0px -1px 0px rgba(54,50,54,0.7);
+	box-shadow:
+		0px 1px 3px rgba(51,47,51,0.5),
+		inset 0px -1px 0px rgba(54,50,54,0.7);
+	text-shadow:
+		0px -1px 1px rgba(51,47,51,0.2),
+		0px 1px 0px rgba(56,52,56,0.3);
+}
+
+#but {
+	margin: 0px;
+	padding: 0px;
+}
+
+.ofertas {
+	margin: 0px;
+	padding: 0px;
+	color: lightgray;
+	background-color: #283A3A;
+	border-bottom: 5px solid lightgray;
+}
+
+.ofertas h2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+ ul {
+    list-style-type:none;
+    text-align:center;
+    margin: 0px;
+    padding: 0px;
+    color: lightgray;
+ }
+
+ .ofertas ul li a {
+ 	text-decoration: none;
+	color: #3D3D3D;
+	color: lightgray;
+ }
+
+.ofertasbox {
+	width: 40%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.ofertasbox p {
+	margin: 0px;
+	padding: 0px;
+}
+
+#icon {
+	font-size: 100px;
+	color: orange;
+}
+
+.bigb3 {
+	margin:0px;
+	padding: 0px;
+	border-right-width: 150px;
+	border-left-width: 150px;
+	height: 450px;
+}
+
+.informacoes {
+	margin: 0px;
+	padding: 0px;
+	background-color: #283A3A;
+	color: lightgray;
+	border-bottom: 5px solid lightgray;
+}
+
+.informacoes h2 {
+	margin: 0px;
+	padding: 0px;
+}
+
+.bigb4 {
+	margin: 0px;
+	padding: 0px;
+	border-right-width: 150px;
+	border-left-width: 150px;
+	height: 460px;
+}
+
+.rodape {
+	margin: 0px;
+	padding: 0px;
+	background-color: #283A3A;
+	color: lightgray;
+	height: 20px;
+}
+
+.rodape h4 {
+	margin: 0px;
+	padding: 0px;
 }
