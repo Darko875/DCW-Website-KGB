@@ -6,6 +6,7 @@ body {
 
 .cabecalho {
 	background-image:  url(https://images.wallpaperscraft.com/image/skyscrapers_road_evening_120636_1366x768.jpg);
+	background-repeat: no-repeat;
 	height: 500px;
 	margin: 0px;
 	padding: 0px;
@@ -57,7 +58,7 @@ body {
 }
 
 .box1 {
-	float: left;
+	display: inline-block;
 	width: 30%;
 	margin-left: 0%;
 	padding: 0px;
@@ -65,8 +66,8 @@ body {
 }
 
 .box2 {
-	float: left;
-	width: 40%;
+	display: inline-block;
+	width: 30%;
 	margin: 0px;
 	padding: 0px;
 	color: lightgray;
@@ -74,7 +75,7 @@ body {
 
 .box3 {
 	padding: 0px;
-	float: left;
+	display: inline-block;
 	width: 30%;
 	color: lightgray;
 }
@@ -272,7 +273,7 @@ button.css3button {
 	padding: 0px;
 	border-right-width: 150px;
 	border-left-width: 150px;
-	height: 460px;
+	height: 1500px;
 }
 
 .rodape {
@@ -287,3 +288,30 @@ button.css3button {
 	margin: 0px;
 	padding: 0px;
 }
+
+.box6 {
+	display: inline-block;
+	width: 30%;
+	margin: 0%;
+	padding: 0px;
+	color: lightgray;
+}
+
+.box6 img {
+	margin: 0px;
+	padding: 0px;
+}
+
+.ofertas h3 a {
+ 	text-decoration: none;
+	color: #3D3D3D;
+	color: lightgray;
+ }
+
+ .box7 {
+ 	display: inline-block;
+	width: 30%;
+	margin: 0%;
+	padding: 0px;
+	color: lightgray;
+ }
