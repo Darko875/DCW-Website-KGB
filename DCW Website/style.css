@@ -5,8 +5,7 @@ body {
 }
 
 .cabecalho {
-	background-image:  url(https://images.wallpaperscraft.com/image/skyscrapers_road_evening_120636_1366x768.jpg);
-	background-repeat: no-repeat;
+	width: 100%;
 	height: 500px;
 	margin: 0px;
 	padding: 0px;
@@ -18,18 +17,28 @@ body {
 	padding: 0px;
 	color: lightgray;
 	position: absolute;
-	top: 430px;
-	left: 493px;
+	top: 70%;
+	left: calc(50% - 180px);
 	height: 35px;
 	width: 370px;
 	border: 5px solid lightgray;
 	
 }
+.cabecalho img {
+	width: 100%;
+	height: 500px;
 
-.menu {
-	background-color: #283A3A;
-	opacity: 0.3; 
 }
+
+nav {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	background-color: #283A3A;
+	color: white;
+	opacity: 0.8;
+}
+
 
 .menu ul {
     padding:0px;
@@ -314,4 +323,8 @@ button.css3button {
 	margin: 0%;
 	padding: 0px;
 	color: lightgray;
+ }
+
+ .box7 img {
+ 	max-width: 100%;
  }
