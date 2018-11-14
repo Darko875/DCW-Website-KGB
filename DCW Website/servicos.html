@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>Formulário de Serviços</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main3.css">
+    </head>
+    <body>
+        <div class="cabecalho">
+            <h1 align="left">KGB- Alojamento Local</h1>
+        </div>
+        <form action="servicos" method="post" class="form-servicos" >
+            <h2 class="form-titulo">Serviços</h2>
+            <div class="input" align="center">Solicitação de Serviços</div>
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="telemovel" placeholder="Telemóvel">
+            <div class="bloco" align="left">
+                <label for="exampleInputEmail1">Seletor</label>
+                <select class="form-control">
+                    <option value="145">Check-in</option>
+                    <option value="146">Limpeza e Manutenção</option>
+                    <option value="147">Consultoria e Decoração</option>
+                </select>
+            </div>
+            <input type="button" value="Enviar" id="botao">
+        </form>
+        
+    </body>
+    </html>

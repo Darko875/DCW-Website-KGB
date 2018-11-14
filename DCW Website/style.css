@@ -17,7 +17,7 @@ body {
 	padding: 0px;
 	color: lightgray;
 	position: absolute;
-	top: 70%;
+	top: calc(40% + 180px);
 	left: calc(50% - 180px);
 	height: 35px;
 	width: 370px;
@@ -72,6 +72,7 @@ nav {
 	margin-left: 0%;
 	padding: 0px;
 	color: lightgray;
+	padding-bottom: 0.5%;
 }
 
 .box2 {
@@ -80,6 +81,7 @@ nav {
 	margin: 0px;
 	padding: 0px;
 	color: lightgray;
+	padding-bottom: 0.5%;
 }
 
 .box3 {
@@ -87,6 +89,7 @@ nav {
 	display: inline-block;
 	width: 30%;
 	color: lightgray;
+	padding-bottom: 0.5%;
 }
 
 .fazemos {
@@ -98,10 +101,11 @@ nav {
 }
 
 .fazemos h2 {
-	height: 45px;
 	color: lightgray;
 	margin: 0px;
 	padding: 0px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
 }
 
 #key {
@@ -140,7 +144,7 @@ nav {
 	padding: 0px;
 	border-right-width: 150px;
 	border-left-width: 150px;
-	height: 314px;
+	height: 50%;
 }
 
 .bigb2 {
@@ -148,7 +152,7 @@ nav {
 	padding: 0px;
 	border-right-width: 150px;
 	border-left-width: 150px;
-	height: 275px;
+	height: 40%;
 }
 
 .perfil {
@@ -162,6 +166,7 @@ nav {
 .perfil h2 {
 	margin: 0px;
 	padding: 0px;
+	padding-top: 0.5%;
 }
 
 .icon1 {
@@ -211,6 +216,7 @@ button.css3button {
 #but {
 	margin: 0px;
 	padding: 0px;
+	padding-bottom: 0.5%;
 }
 
 .ofertas {
@@ -224,6 +230,7 @@ button.css3button {
 .ofertas h2 {
 	margin: 0px;
 	padding: 0px;
+	padding-top: 0.5%;
 }
 
  ul {
@@ -261,7 +268,7 @@ button.css3button {
 	padding: 0px;
 	border-right-width: 150px;
 	border-left-width: 150px;
-	height: 450px;
+	height: 40%;
 }
 
 .informacoes {
@@ -275,6 +282,7 @@ button.css3button {
 .informacoes h2 {
 	margin: 0px;
 	padding: 0px;
+	padding-top: 0.5%
 }
 
 .bigb4 {
@@ -282,7 +290,7 @@ button.css3button {
 	padding: 0px;
 	border-right-width: 150px;
 	border-left-width: 150px;
-	height: 1500px;
+	height: 70%;
 }
 
 .rodape {
@@ -290,12 +298,13 @@ button.css3button {
 	padding: 0px;
 	background-color: #283A3A;
 	color: lightgray;
-	height: 20px;
+	height: 20%;
 }
 
 .rodape h4 {
 	margin: 0px;
 	padding: 0px;
+	padding-top: 0.5%;
 }
 
 .box6 {
@@ -327,4 +336,8 @@ button.css3button {
 
  .box7 img {
  	max-width: 100%;
+ }
+
+ .button1 {
+ 	padding-bottom: 0.5%;
  }
