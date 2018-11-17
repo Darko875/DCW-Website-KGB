@@ -25,8 +25,8 @@ body {
 	
 }
 
-@media screen and (min-width: 2500px) {
-	.cabecalho h1 {
+@media screen and (min-height: 668px) {
+.cabecalho h1 {
 	margin: 0px;
 	padding: 0px;
 	color: lightgray;
@@ -38,7 +38,33 @@ body {
 	border: 5px solid lightgray;
 	
 }
-	
+
+@media screen and (min-width: 881px) {
+	.cabecalho h1 {
+	margin: 0px;
+	padding: 0px;
+	color: lightgray;
+	position: absolute;
+	top: calc(20% + 180px);
+	left: calc(50% - 180px);
+	height: 35px;
+	width: 370px;
+	border: 5px solid lightgray;	
+}		
+}
+
+@media screen and (min-width: 1350px) {
+	.cabecalho h1 {
+	margin: 0px;
+	padding: 0px;
+	color: lightgray;
+	position: absolute;
+	top: calc(0% + 180px);
+	left: calc(50% - 180px);
+	height: 35px;
+	width: 370px;
+	border: 5px solid lightgray;	
+}		
 }
 .cabecalho img {
 	width: 100%;
