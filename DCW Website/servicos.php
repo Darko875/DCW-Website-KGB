@@ -26,7 +26,6 @@
             <div class="input" align="center">Solicitação de Serviços</div>
             <input type="text" name="nome" placeholder="Nome">
             <input type="text" name="email" placeholder="Email">
-            <input type="text" name="telemovel" placeholder="Telemóvel">
             <div class="bloco" align="left">
                 <label for="exampleInputEmail1">Serviço:</label>
                 <select class="form-control">

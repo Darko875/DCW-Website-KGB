@@ -24,10 +24,13 @@
         <form action="servicos" method="post" class="form-servicos" >
             <h2 class="form-titulo">Registo</h2>
             <div class="input">Crie a sua conta</div>
-            <input type="text" name="utilizador" placeholder="Crie o seu utilizador">
+            <input type="text" name="nome" placeholder="Crie o seu utilizador">
+            <input type="date" name="data_nascimento" placeholder="Insira a sua data de nascimento">
+            <input type="text" name="nacionalidade" placeholder="Insira a sua nacionalidade">
+            <input type="text" name="cidade" placeholder="Insira a sua cidade">
             <input type="text" name="email" placeholder="Insira o seu email">
             <input type="text" name="palavrapasse" placeholder="Insira uma palavra passe">
-            <input type="text" name="confirmarpalavrapasse" placeholder="Confirmar a sua Palavra Passe">
+            <input type="text" name="n_cont" placeholder="Insira o seu contribuinte">
             <div class="login" align="left"><a href="login.html"><p>Já tem conta?</p></a></div>
             <input type="button" value="Enviar" id="botao">
         </form>
