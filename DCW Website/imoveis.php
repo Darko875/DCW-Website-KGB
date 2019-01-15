@@ -1,17 +1,22 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Imóveis</title>
 	<link rel="stylesheet" href="main5.css">
+	<?php 
+	include_once("connect.php"); 
+	$consulta2 = mysqli_query($conn, "SELECT * FROM hospede where nid = '" . $_SESSION["id"] . "'");
+	$consulta3 = mysqli_fetch_array($consulta2);
+	?>
 </head>
 <body>
-	<<table>
+	<table>
 		<caption>Imóveis</caption>
 		<thead>
 			<tr>
-				<th>header</th>
+				<th>Detalhes</th>
 			</tr>
 		</thead>
 		<tbody>

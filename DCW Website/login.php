@@ -10,7 +10,6 @@
             <div class="menu" align="center">
                 <nav>
                     <ul>
-                        <li id="vhs"><a href="index.html"><h1>KGB- Alojamento Local</h1></a></li>
                         <li><a href="index.html">Home</a></li><!--
                      --><li><a href="index.html#901">Serviços</a></li><!--
                      --><li><a href="index.html#902">Perfil</a></li><!--
@@ -21,12 +20,14 @@
                 </nav>
             </div>
         </div>
-        <form action="servicos" method="post" class="form-servicos" >
+        <form action="valida.php" method="post" id="frmLogin" >
             <h2 class="form-titulo">Login</h2>
-            <input type="text" name="utilizador" placeholder="Utilizador">
-            <input type="text" name="palavrapasse" placeholder="Palavra Passe">
-            <div class="login" align="left"><a href="registo.html"><p>Ainda não tem conta?</p></a></div>
-            <input type="button" value="Login" id="botao">
-        </form>      
+            <div class="error-message"><?php if(isset($message)) { echo $message; } ?></div>
+            <input type="text" name="email" placeholder="email">
+            <input type="text" name="password" placeholder="Password">
+            <input type="submit" name="login" value="Login" id="botao">
+        </form>
+                    
+                
     </body>
     </html>

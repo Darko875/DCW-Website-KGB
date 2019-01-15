@@ -10,7 +10,6 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li id="vhs"><a href="index.html"><h1>KGB- Alojamento Local</h1></a></li>
                         <li><a href="index.html">Home</a></li><!--
                      --><li><a href="index.html#901">Serviços</a></li><!--
                      --><li><a href="index.html#902">Perfil</a></li><!--
