@@ -1,3 +1,7 @@
+<?php 
+@$msg= 0;
+@$msg= $_REQUEST['msg'];
+?>
 <!DOCTYPE html>
     <html>
     <head>
@@ -20,14 +24,16 @@
                 </nav>
             </div>
         </div>
-        <form action="servicos" method="post" class="form-servicos" >
+        <form action="processa2.php" method="post" class="form-servicos" >
             <h2 class="form-titulo">Informações</h2>
-            <div class="input">Solicitação de Informações</div>
+            <?php if($msg==@enviado){
+                echo "<h3>Mensagem enviada, agradecemos o seu pedido.</h3>";
+             } else {} ?>
             <input type="text" name="nome" placeholder="Nome">
             <input type="text" name="email" placeholder="Email">
             <textarea name="mensagem" placeholder="Escreva aqui a sua mensagem."></textarea>
-            <input type="button" value="Enviar" id="botao">
+            <input type="submit" value="Enviar" id="botao">
         </form>
         
     </body>
-    </html>
+</html>
