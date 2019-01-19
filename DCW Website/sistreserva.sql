@@ -13,13 +13,6 @@ n_cont int NOT NULL,
 password varchar(32) NOT NULL
 );
 
-
-CREATE TABLE servicos(
-id_ser int PRIMARY Key NOT NULL AUTO_INCREMENT,
-ser_t varchar(120) NOT NULL,
-nid int NOT NULL,
-FOREIGN kEY (nid) REFERENCES hospede(nid) ON DELETE CASCADE);
-
 CREATE TABLE imovel(
 idc int PRIMARY Key NOT NULL AUTO_INCREMENT,
 tipo varchar(10) NOT NULL,
@@ -27,7 +20,7 @@ tipologia varchar(10) NOT NULL,
 preco real NOT NULL,
 descricao char(200) NOT NULL,
 cidade_im varchar(80) NOT NULL,
-image varchar(255) NOT NULL);
+image longblob NOT NULL);
 
 CREATE TABLE reserva(
 idf int PRIMARY Key NOT NULL AUTO_INCREMENT,
@@ -39,11 +32,6 @@ idc int NOT NULL,
 FOREIGN kEY (nid) REFERENCES hospede(nid) ON DELETE CASCADE,
 FOREIGN kEY (idc) REFERENCES imovel(idc) ON DELETE CASCADE);
 
-CREATE TABLE informacoes(
-id_info int PRIMARY Key NOT NULL AUTO_INCREMENT,
-msg_info varchar(120) NOT NULL,
-nid int NOT NULL,
-FOREIGN kEY (nid) REFERENCES hospede(nid) ON DELETE CASCADE);
 
 insert into hospede (nid, nome, data_nascimento, nacionalidade, cidade, email, n_cont, password) values (1, 'Averell Traill', '4/12/2018', 'Portugal', 'São Torcato', 'atraill0@google.com.br', '00-007-1324', 'O4SWhMg');
 insert into hospede (nid, nome, data_nascimento, nacionalidade, cidade, email, n_cont, password) values (2, 'Genevra Kelshaw', '9/28/2018', 'Portugal', 'Portela', 'gkelshaw1@dailymail.co.uk', '63-665-1533', 'drRnO0pQpHht');
@@ -163,7 +151,7 @@ insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) va
 insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) values (14, 'Moradia', 'T1', '200.88', 'sadddddddddddddddddddddddddddddd', 'Guojia', 'http://dummyimage.com/179x108.jpg/cc0000/ffffff');
 insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) values (15, 'Moradia', 'T2', '400.32', 'dsadssssssssssssssssssssssssssssdsaasd', 'Shuiyang', 'http://dummyimage.com/179x108.jpg/cc0000/ffffff');
 
-insert into reserva (idf, data_entrada, data_saida, npessoas, nid, idc) values (1, '1/25/2018', '3/20/2018', 1, 1, 1);
+insert into reserva (idf, data_entrada, data_saida, npessoas, nid, idc) values (1, '25/1/2018', '20/3/2018', 1, 1, 1);
 insert into reserva (idf, data_entrada, data_saida, npessoas, nid, idc) values (2, '10/25/2018', '5/10/2018', 2, 2, 2);
 insert into reserva (idf, data_entrada, data_saida, npessoas, nid, idc) values (3, '11/5/2018', '4/10/2018', 3, 3, 3);
 insert into reserva (idf, data_entrada, data_saida, npessoas, nid, idc) values (4, '7/9/2018', '3/21/2018', 4, 4, 4);

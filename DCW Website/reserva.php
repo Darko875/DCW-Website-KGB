@@ -1,3 +1,7 @@
+<?php 
+session_start();
+include_once("connect.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,12 +11,12 @@
 	<link rel="stylesheet" href="">
 </head>
 <body>
-	<form action="" method="get" accept-charset="utf-8">
+	<form action="processa3.php" method="post" accept-charset="utf-8">
 		<input type="number" name="idc">
 		<input type="date" name="data_entrada">
 		<input type="date" name="data_saida">
 		<input type="number" name="npessoas">
-		<input type="button" value="Enviar" id="butao">
+		<input type="submit" value="Enviar" id="butao">
 	</form>
 </body>
 </html>

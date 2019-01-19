@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,19 +9,15 @@
 	<title>Imóveis</title>
 	<link rel="stylesheet" href="main5.css">
 	<?php 
-	include_once("connect.php"); 
-	$consulta2 = mysqli_query($conn, "SELECT * FROM hospede where nid = '" . $_SESSION["id"] . "'");
-	$consulta3 = mysqli_fetch_array($consulta2);
+	include_once("connect.php");
+	$consult =  "SELECT * FROM imovel";
+	$consulta2 = mysqli_query($conn, $consult);
+	$row = mysqli_fetch_assoc($consulta2);
 	?>
 </head>
 <body>
 	<table>
 		<caption>Imóveis</caption>
-		<thead>
-			<tr>
-				<th>Detalhes</th>
-			</tr>
-		</thead>
 		<tbody>
 			<tr>
 				<td>id</td>
@@ -30,230 +29,20 @@
 				<td>imagem</td>
 			</tr>
 		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
 		<tbody>
+			<?php while($row = mysqli_fetch_assoc($consulta2)) { ?>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
+				<td><?php echo $row['idc']; ?></td>
+				<td><?php echo $row['tipo']; ?></td>
+				<td><?php echo $row['tipologia']; ?></td>
+				<td><?php echo $row['preco']; ?></td>
+				<td><?php echo $row['descricao']; ?></td>
+				<td><?php echo $row['cidade_im']; ?></td>
+				<td><img src="<?php echo $row['image']; ?>"></td>
 			</tr>
+		<?php  } ?>
 		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
-		<thead>
-			<tr>
-				<th>header</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</tbody>
+		
 	</table>
 </body>
 </html>

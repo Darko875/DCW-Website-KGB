@@ -13,6 +13,8 @@ include_once("connect.php");
 <body>
 	<?php 
 		include_once("connect.php");
+		$consult1 =  "SELECT * FROM reserva where nid = '" . $_SESSION["nid"] . "'";
+		$consulta5 = mysqli_query($conn, $consult1);
 	?>
 	<div class="cabecalho">
         <div class="menu">
@@ -38,7 +40,28 @@ include_once("connect.php");
 		<h4><?php echo "Nº de Contribuinte ou Passaporte: ". $_SESSION['usern_cont'];?></h4>
 	</div>
 	<div class="historico">
-		
+		<table>
+		<caption>Histórico de Reservas</caption>
+		<tbody>
+			<tr>
+				<td>Código da reserva</td>
+				<td>data de entrada</td>
+				<td>data de saída</td>
+				<td>número de pessoas</td>
+				<td>Código do Imóvel</td>
+			</tr>
+		</tbody>
+		<tbody>
+			<?php while($row = mysqli_fetch_assoc($consulta5)) { ?>
+			<tr>
+				<td><?php echo $row['idf']; ?></td>
+				<td><?php echo $row['data_entrada']; ?></td>
+				<td><?php echo $row['data_saida']; ?></td>
+				<td><?php echo $row['npessoas']; ?></td>
+				<td><?php echo $row['idc']; ?></td>
+			</tr>
+		<?php  } ?>
+		</tbody>
 	</div>
 	<div class="logout">
 		<a href="logout.php"> Logout </a>  
