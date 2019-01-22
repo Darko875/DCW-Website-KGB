@@ -15,6 +15,7 @@ form {
     box-sizing: border-box;
     margin-top: 20px;
     border-radius: 8px;
+    color: lightgray;
 }
 
 h2 {
@@ -64,16 +65,6 @@ div {
     height: 20%;
     border-bottom: 3px solid lightgray;
 }
-
-.cabecalho h1 {
-    margin: 0px;
-    padding: 0px;
-    color: lightgray;
-    display: inline-block;
-    width: 100%;
-}
-
-
 nav {
     width: 100%;
     z-index: 10;
@@ -86,7 +77,6 @@ nav {
     margin:0px;
     list-style:none;
     height: 40px;
-    text-align: left;
 }
 
 .menu ul li {
@@ -98,11 +88,54 @@ nav {
     display: inline-block;
     border-bottom: 3px solid #283A3A;
     color: lightgray;
-    padding: 0px 10px;
+    padding: 0px;
     text-decoration: none;
     line-height: 37px;
 }
 
 #vhs {
     width: 40%;
+}
+
+table, th, td {
+    border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.icon1 {
+    font-size: 120px;
+    color: orange;
+}
+
+button.css3button {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #f7f7f7;
+    padding: 10px 20px;
+    background: -moz-linear-gradient(
+        top,
+        #403e3b 0%,
+        #3b3a36 25%,
+        #2e2a29);
+    background: -webkit-gradient(
+        linear, left top, left bottom,
+        from(#403e3b),
+        color-stop(0.25, #3b3a36),
+        to(#2e2a29));
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #383532;
+    -moz-box-shadow:
+        0px 1px 3px rgba(51,47,51,0.5),
+        inset 0px -1px 0px rgba(54,50,54,0.7);
+    -webkit-box-shadow:
+        0px 1px 3px rgba(51,47,51,0.5),
+        inset 0px -1px 0px rgba(54,50,54,0.7);
+    box-shadow:
+        0px 1px 3px rgba(51,47,51,0.5),
+        inset 0px -1px 0px rgba(54,50,54,0.7);
+    text-shadow:
+        0px -1px 1px rgba(51,47,51,0.2),
+        0px 1px 0px rgba(56,52,56,0.3);
 }

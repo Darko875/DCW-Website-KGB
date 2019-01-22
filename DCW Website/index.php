@@ -12,12 +12,12 @@
 		<div class="menu" align="center">
 			<nav>
 			    <ul>
-			        <li><a href="index.html">Home</a></li><!--
+			        <li><a href="index.php">Home</a></li><!--
 			     --><li><a href="#901">Serviços</a></li><!--
 			     --><li><a href="#902">Perfil</a></li><!--
 			     --><li><a href="#903">Ofertas</a></li><!--
 			     --><li><a href="#904">Informações</a></li><!--
-			 	 --><li><a href="login.html">Entrar</a></li>
+			 	 --><li><a href="login.php">Entrar</a></li>
 			    </ul>
 			</nav>
 		</div>
@@ -49,7 +49,7 @@
 						<p>Fornecemos gratuitamente aconselhamento legal sobre a atividade de Alojamento Local e ajudamo-lo a decorar e equipar o seu espaço da forma mais atrativa e eficiente</p>
 					</div>
 				</div>
-				<div id="but"><a href="servicos.html"><button type="button" href=# class="css3button">Solicitar serviço</button></a></div>
+				<div id="but"><a href="servicos.php"><button type="button" href=# class="css3button">Solicitar serviço</button></a></div>
 			</div>
 	</div>
 	<div class="perfil" align="center" id="902">
@@ -60,7 +60,7 @@
 				<p>O perfil serve para o cliente poder ter acesso a alguns detalhes, poder supervisionar as novas ofertas de alojamentos locais e ser aconselhado de acordo com os seus gostos</p>
 			</div>
 			<div class="button1" align="center">
-				<a href="registo.html"><button type="button" class="css3button">Registar-se</button></a>
+				<a href="registo.php"><button type="button" class="css3button">Registar-se</button></a>
 			</div>
 		</div>
 	</div>
@@ -71,93 +71,93 @@
 			<div class="ofertabox">
 				<h4 align="center">Aqui se encontram algumas ofertas dos nossos clientes:</h4>
 				<div class="box6">
-					<div class="camp1" align="center"><a href="https://helderfilipegames.wixsite.com/meusite"><img src="https://image.ibb.co/gNdic0/img1.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/gNdic0/img1.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://helderfilipegames.wixsite.com/meusite">My Stay</a></h3>
+						<h3><a href="">My Stay</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://barracasinc.wixsite.com/apartamentos"><img src="https://image.ibb.co/cMtGx0/img2.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/cMtGx0/img2.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://barracasinc.wixsite.com/apartamentos">DREAMFINDER INC</a></h3>
+						<h3><a href="">DREAMFINDER INC</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://ispg42034212.wixsite.com/alugasonhos"><img src="https://image.ibb.co/gNP0Pf/img3.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/gNP0Pf/img3.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://ispg42034212.wixsite.com/alugasonhos">Aluga Sonhos</a></h3>
+						<h3><a href="">Aluga Sonhos</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://nunofeiteira22.wixsite.com/meusite"><img src="https://image.ibb.co/jEmQqL/img4.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/jEmQqL/img4.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://nunofeiteira22.wixsite.com/meusite">Alojamento Local Confiança</a></h3>
+						<h3><a href="">Alojamento Local Confiança</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://joaomrodrigues114.wixsite.com/meusite"><img src="https://image.ibb.co/j0t5qL/img5.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/j0t5qL/img5.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://joaomrodrigues114.wixsite.com/meusite">APARTAMENTO</a></h3>
+						<h3><a href="">APARTAMENTO</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://2014itmdiogomateus.wixsite.com/bmyguest"><img src="https://image.ibb.co/bw5JAL/img6.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/bw5JAL/img6.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://2014itmdiogomateus.wixsite.com/bmyguest">B My Guest</a></h3>
+						<h3><a href="">B My Guest</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://fcpereira12.wixsite.com/meusite"><img src="https://image.ibb.co/eWNyAL/img7.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/eWNyAL/img7.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://fcpereira12.wixsite.com/meusite">DI XICCO APPART</a></h3>
+						<h3><a href="">DI XICCO APPART</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://ispgayanf.wixsite.com/rentnigths"><img src="https://image.ibb.co/kCQwx0/img8.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/kCQwx0/img8.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://ispgayanf.wixsite.com/rentnigths">Rent Nights</a></h3>
+						<h3><a href="">Rent Nights</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://vitinhogoodgamez.wixsite.com/alojanow"><img src="https://image.ibb.co/kDBEjf/img9.png" align="center" width="300"300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/kDBEjf/img9.png" align="center" width="300"300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://vitinhogoodgamez.wixsite.com/alojanow">Aloja Now</a></h3>
+						<h3><a href="">Aloja Now</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://nunoricardo2009.wixsite.com/sitedcw"><img src="https://image.ibb.co/ckhyAL/img10.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/ckhyAL/img10.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://nunoricardo2009.wixsite.com/sitedcw">Apartamento</a></h3>
+						<h3><a href="">Apartamento</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://wandoothe1966.wixsite.com/aplx"><img src="https://image.ibb.co/hu7n4f/img11.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/hu7n4f/img11.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://wandoothe1966.wixsite.com/aplx">APLX</a></h3>
+						<h3><a href="">APLX</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://pedrovarela999.wixsite.com/dcw1"><img src="https://image.ibb.co/cRfJAL/img12.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/cRfJAL/img12.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://pedrovarela999.wixsite.com/dcw1">GRUPO IMOBILIÁRIO</a></h3>
+						<h3><a href="">GRUPO IMOBILIÁRIO</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://danielviana18.wixsite.com/ciaccc"><img src="https://image.ibb.co/mwh9H0/img13.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/mwh9H0/img13.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://danielviana18.wixsite.com/ciaccc">CIA</a></h3>
+						<h3><a href="">CIA</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://inaliugomes.wixsite.com/hoteldossonhos/"><img src="https://image.ibb.co/c440Pf/img14.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/c440Pf/img14.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://inaliugomes.wixsite.com/hoteldossonhos/">Hotel dos Sonhos</a></h3>
+						<h3><a href="">Hotel dos Sonhos</a></h3>
 					</div>
 				</div>
 				<div class="box7">	
-					<div class="camp1" align="center"><a href="https://nunomiguelbarbosal.wixsite.com/exercicio1nunohugo"><img src="https://image.ibb.co/ek9pH0/img15.png" align="center" width="300" height="200"></a></div>
+					<div class="camp1" align="center"><a href=""><img src="https://image.ibb.co/ek9pH0/img15.png" align="center" width="300" height="200"></a></div>
 					<div class="a1" align="center">
-						<h3><a href="https://nunomiguelbarbosal.wixsite.com/exercicio1nunohugo">RENT A FLAT</a></h3>
+						<h3><a href="">RENT A FLAT</a></h3>
 					</div>
 				</div>
 			</div>
@@ -178,7 +178,7 @@
 					<p>Rua Escola Normal 4000-199 Porto</p>
 			</div>
 			<div class="button1" align="center">
-				<a href="informacoes.html"><button type="button" class="css3button">Mais Informações</button></a>
+				<a href="informacoes.php"><button type="button" class="css3button">Mais Informações</button></a>
 			</div>		
 		</div>
 	</div>

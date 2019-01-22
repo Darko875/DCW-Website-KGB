@@ -11,12 +11,12 @@
             <div class="menu">
                 <nav>
                     <ul>
-                        <li><a href="index.html">Home</a></li><!--
-                     --><li><a href="index.html#901">Serviços</a></li><!--
-                     --><li><a href="index.html#902">Perfil</a></li><!--
-                     --><li><a href="index.html#903">Ofertas</a></li><!--
-                     --><li><a href="index.html#904">Informações</a></li><!--
-                     --><li><a href="login.html">Entrar</a></li>
+                        <li><a href="index.php">Home</a></li><!--
+                     --><li><a href="index.php#901">Serviços</a></li><!--
+                     --><li><a href="index.php#902">Perfil</a></li><!--
+                     --><li><a href="index.php#903">Ofertas</a></li><!--
+                     --><li><a href="index.php#904">Informações</a></li><!--
+                     --><li><a href="login.php">Entrar</a></li>
                     </ul>
                 </nav>
             </div>
