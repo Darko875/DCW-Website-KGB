@@ -22,7 +22,7 @@ if (isset($_POST["enviar"])) {
 	if (count($resu3) === 0) {
 		$consult = "INSERT INTO reserva (data_entrada, data_saida, npessoas, nid, idc) VALUES ('$data_entrada', '$data_saida', '$npessoas', '$nid', '$id')";
 		$consult2 = mysqli_query($conn, $consult);
-		$consult3 = mysqli_fetch_array($consult2);
+		@$consult3 = mysqli_fetch_array($consult2);
 			header('Location: perfil.php');	
 	}
 	else {

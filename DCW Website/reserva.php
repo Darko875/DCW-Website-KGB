@@ -8,7 +8,7 @@ include_once("connect.php");
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Reservas</title>
-	<link rel="stylesheet" href="main4.css">
+	<link rel="stylesheet" href="main3.css">
 </head>
 <body>
 	<div class="cabecalho">

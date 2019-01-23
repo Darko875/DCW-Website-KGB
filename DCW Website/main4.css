@@ -76,7 +76,7 @@ nav {
     padding:0px;
     margin:0px;
     list-style:none;
-    height: 40px;
+    height: 30%;
 }
 
 .menu ul li {
@@ -90,12 +90,8 @@ nav {
     color: lightgray;
     padding: 0px;
     text-decoration: none;
-    line-height: 37px;
 }
 
-#vhs {
-    width: 40%;
-}
 
 table, th, td {
     border: 1px solid black;

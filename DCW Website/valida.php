@@ -1,6 +1,6 @@
 <?php
             session_start();
-            $conn = mysqli_connect("localhost","darko","darko","sistreserva");
+            include_once("connect.php");
     
             $message="";
             if(!empty($_POST["login"])) {

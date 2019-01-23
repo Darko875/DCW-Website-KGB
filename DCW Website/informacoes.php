@@ -7,7 +7,7 @@
     <head>
         <title>Formulário de Solicitação de Informações</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="main4.css">
+        <link rel="stylesheet" href="main3.css">
     </head>
     <body>
         <div class="cabecalho">

@@ -1,2 +1,2 @@
 # DCW Website KGB
-# Site do Alojamento Local: https://dcwprojects.000webhostapp.com/index.html 
+# Site do Alojamento Local: http://dcwproject.dx.am/index.php

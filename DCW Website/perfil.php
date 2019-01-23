@@ -8,7 +8,7 @@ include_once("connect.php");
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Perfil</title>
-	<link rel="stylesheet" href="main4.css">
+	<link rel="stylesheet" href="main3.css">
 	<link rel="stylesheet" href="main5.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -46,10 +46,10 @@ include_once("connect.php");
 		<caption style="color:lightgray;">Histórico de Reservas</caption>
 		<tbody style="color:lightgray;" align="center">
 			<tr>
-				<td>Código da reserva</td>
-				<td>data de entrada</td>
-				<td>data de saída</td>
-				<td>número de pessoas</td>
+				<td>Código da Reserva</td>
+				<td>Data de Entrada</td>
+				<td>Data de Saída</td>
+				<td>Número de Pessoas</td>
 				<td>Código do Imóvel</td>
 			</tr>
 		</tbody>

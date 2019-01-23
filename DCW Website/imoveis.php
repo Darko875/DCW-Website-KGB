@@ -13,13 +13,13 @@ session_start();
 	$consult =  "SELECT * FROM imovel";
 	$consulta2 = mysqli_query($conn, $consult);
 	?>
-	<link rel="stylesheet" href="main4.css">
+	<link rel="stylesheet" href="main3.css">
 </head>
 <body>
-	<div class="cabecalho" align="center">
-        <div class="menu" align="center">
-            <nav align="center">
-                <ul align="center">
+	<div class="cabecalho">
+        <div class="menu">
+            <nav>
+                <ul>
                     <li><a href="index.php">Home</a></li><!--
                  --><li><a href="index.php#901">Serviços</a></li><!--
                  --><li><a href="index.php#902">Perfil</a></li><!--

@@ -21,7 +21,7 @@
         </div>
         <form action="valida.php" method="post" id="frmLogin" >
             <h2 class="form-titulo">Login</h2>
-            <div class="error-message" style="color:lightgray;">><?php if(isset($message)) { echo $message; } ?></div>
+            <div class="error-message" style="color:lightgray;"><?php if(isset($message)) { echo $message; } ?></div>
             <input type="text" name="email" placeholder="email">
             <input type="text" name="password" placeholder="Password">
             <input type="submit" name="login" value="Login" id="botao">

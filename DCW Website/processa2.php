@@ -1,6 +1,6 @@
 <?php
 
-	$para = "danielviana18@gmail.com";
+	$para = "admin@dcwproject.dx.am";
 	$assunto = "Contato pelo site";
 	$nome = $_POST['nome'];
 	$email = $_POST['email'];
