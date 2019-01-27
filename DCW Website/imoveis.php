@@ -42,6 +42,7 @@ session_start();
 					<td>Descrição</td>
 					<td>Cidade</td>
 					<td>Imagem</td>
+					<td>Calendário</td>
 				</tr>
 			</tbody>
 			<tbody>
@@ -54,13 +55,11 @@ session_start();
 					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['descricao']; ?></td>
 					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['cidade_im']; ?></td>
 					<td style="color:lightgray; padding: 15px; border: 1px solid"><img src="<?php echo $row['image']; ?>"></td>
+					<td style="color:lightgray; padding: 15px; border: 1px solid"><a href=" calendario<?php echo $row['idc']; ?>.php"><button class="css3button"><?php echo "Calendário ". $row['idc']; ?></button></a></td>
 				</tr>
 			<?php  } ?>
 			</tbody>
 		</table>
-	</div>
-	<div>
-		<a href="calendario.php"><button type="button" href=# class="css3button">Calendário</button></a>
 	</div>
 </body>
 </html>
