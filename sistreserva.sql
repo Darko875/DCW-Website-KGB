@@ -1,6 +1,6 @@
 CREATE DATABASE sist_reserva;
 
-use sistreserva;
+use sist_reserva;
 
 CREATE TABLE hospede(
 nid int PRIMARY Key NOT NULL AUTO_INCREMENT,
