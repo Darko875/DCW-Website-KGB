@@ -51,6 +51,6 @@
             <img src="./assets/home_guests.jpg" alt="home_guests">
         </div>
     </div>
-    <footer><p>Github: Drako875</p></footer>
+    <footer align="center"><p>Github: Drako875</p></footer>
 </body>
 </html>
