@@ -1,10 +1,9 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
     <html>
     <head>
-        <title>Formulário de Registo</title>
+        <title>Formulário de Login</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="./styles/register.css">
+        <link rel="stylesheet" href="./styles/login.css">
     </head>
     <body>
     <div class="container" align="center">
@@ -31,12 +30,10 @@
                 <div class="black-block">
                     <form action="valida.php" method="post" id="frmLogin" >
                         <h2 class="form-titulo">Login</h2><br><br><br>
-                        <label align="left">Email</label><br>
-                        <input type="text" name="email" id="imp"><br>
-                        <label align="left">Password</label><br>
-                        <input type="password" name="password" id="imp"><br>
-                        <label>Username</label><br>
-                        <input type="text" name="username" id="imp">
+                        <label align="left">Email</label><br><br>
+                        <input type="text" name="email" id="imp"><br><br>
+                        <label align="left">Password</label><br><br>
+                        <input type="text" name="password" id="imp">
                         <input type="submit" name="login" value="Sign In" id="b1" class="b1">
                         <div class="error-message" style="color:lightgray;"><?php if(isset($message)) { echo $message; } ?></div>
                     </form>
@@ -44,5 +41,5 @@
             </div>
         </div>
     </div>      
-    </body>
-    </html>
+</body>
+</html>

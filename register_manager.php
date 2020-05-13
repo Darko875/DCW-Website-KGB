@@ -4,41 +4,45 @@
     <head>
         <title>Formulário de Registo</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="main2.css">
+        <link rel="stylesheet" href="./styles/register.css">
     </head>
     <body>
-        <div class="cabecalho">
-            <div class="menu">
-                <nav>
-                    <ul>
-                        <li><a href="index.php">Home</a></li><!--
-                     --><li><a href="index.php#901">Serviços</a></li><!--
-                     --><li><a href="index.php#902">Perfil</a></li><!--
-                     --><li><a href="index.php#903">Ofertas</a></li><!--
-                     --><li><a href="index.php#904">Informações</a></li><!--
-                     --><li><a href="login.php">Entrar</a></li>
-                    </ul>
-                </nav>
+    <div class="container" align="center">
+        <div class="header" align="center">
+            <div class="headerMenu" align="center">
+                    <a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 10px; padding: 0; "/></a>
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Managers</a></li>
+                                <li><a href="#">Guests</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="headImg">
+                <img src="./assets/home_asset.jpg" alt="home_image" style="width: 1100px; height: 618.75; filter: blur(4px);
+                box-sizing: border-box;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                mix-blend-mode: luminosity;
+                border: 1px solid #000000;
+                max-width: 1100px;" align="center"/>
+                <div class="black-block">
+                    <form action="valida.php" method="post" id="frmLogin" >
+                        <h2 class="form-titulo">Login</h2><br><br><br>
+                        <label align="left">Email</label><br>
+                        <input type="text" name="email" id="imp"><br>
+                        <label align="left">Password</label><br>
+                        <input type="password" name="password" id="imp"><br>
+                        <label>Username</label><br>
+                        <input type="text" name="username" id="imp">
+                        <input type="submit" name="login" value="Sign In" id="b1" class="b1">
+                        <div class="error-message" style="color:lightgray;"><?php if(isset($message)) { echo $message; } ?></div>
+                    </form>
+                </div>
             </div>
         </div>
-        <form action="processa.php" method="post" class="frmregisto" >
-            <h2 class="form-titulo">Registo</h2>
-            <?php 
-            if (isset($_SESSION['msg'])){
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']); 
-            }
-            ?>
-            <div class="input">Crie a sua conta</div>
-            <input type="text" name="nome" placeholder="Crie o seu utilizador">
-            <input type="date" name="data_nascimento" placeholder="Insira a sua data de nascimento">
-            <input type="text" name="nacionalidade" placeholder="Insira a sua nacionalidade">
-            <input type="text" name="cidade" placeholder="Insira a sua cidade">
-            <input type="text" name="email" placeholder="Insira o seu email">
-            <input type="text" name="n_cont" placeholder="Insira o seu contribuinte">
-            <input type="text" name="password" placeholder="Insira uma palavra passe">
-            <div class="login" align="left"><a href="login.html"><p>Já tem conta?</p></a></div>
-            <input type="submit" value="Enviar" id="botao">
-        </form>
+    </div>      
     </body>
     </html>
