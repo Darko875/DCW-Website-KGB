@@ -14,9 +14,10 @@
                 <div class="menu">
                     <nav>
                         <ul>
-                            <li><a href="#">Managers</a></li>
-                            <li><a href="#">Guests</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="#124">Guests</a></li>
+                            <li><a href="#123">Services</a></li>
+                            <li><a href="register.php">Register</a></li>
+                            <li><a href="login.php">Login</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -25,8 +26,8 @@
                 <img src="./assets/home_asset.jpg" alt="home_image" style="width: 1100px; height: 618.75;" align="center">
                 <h1>Welcome to KGB</h1>
             </div>
-            <div class="headerMan">
-                <h2>Mangers</h2>
+            <div class="headerMan" id="124">
+                <h2>Guests</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
@@ -37,10 +38,10 @@
             </div>
         </div>
         <div class="managers" align="center">
-            <img src="./assets/home_managers.jpg" alt="home_managers">
+            <img src="./assets/home_guests.jpg" alt="home_guests">
         </div>
-        <div class="guests" align="center">
-        <h2>Guests</h2>
+        <div class="guests" align="center" id="123">
+        <h2>Services</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
@@ -48,7 +49,7 @@
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
             fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
             sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <img src="./assets/home_guests.jpg" alt="home_guests">
+            <img src="./assets/home_services.jpg" alt="home_guests">
         </div>
     </div>
     <footer align="center"><p>Github: Drako875</p></footer>

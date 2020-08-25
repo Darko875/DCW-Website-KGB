@@ -1,4 +1,28 @@
-<?php session_start(); ?>
+<?php 
+    
+    include_once('dbFunction.php');  
+       
+    $funObj = new dbFunction();  
+
+if($_POST['register']){  
+    $username = $_POST['username'];  
+    $email = $_POST['email'];  
+    $password = $_POST['password'];  
+    $confirmPassword = $_POST['confirmPassword'];  
+    if($password == $confirmPassword){   
+        $register = $funObj->UserRegister($username, $email, $password);  
+        if($register){  
+                echo "<script>alert('Registration Successful')</script>";  
+        }else{  
+            echo "<script>alert('Registration Not Successful')</script>";  
+        }  
+    } else {  
+        echo "<script>alert('Password Not Match')</script>";  
+      
+    }  
+}  
+
+?>
 <!DOCTYPE html>
     <html>
     <head>
@@ -29,15 +53,17 @@
                 border: 1px solid #000000;
                 max-width: 1100px;" align="center"/>
                 <div class="black-block">
-                    <form action="valida.php" method="post" id="frmLogin" >
-                        <h2 class="form-titulo">Login</h2><br><br><br>
-                        <label align="left">Email</label><br>
-                        <input type="text" name="email" id="imp"><br>
-                        <label align="left">Password</label><br>
-                        <input type="password" name="password" id="imp"><br>
+                    <form action="" method="post" id="frmLogin" name="register">
+                        <h2 class="form-titulo">Register</h2><br>
                         <label>Username</label><br>
-                        <input type="text" name="username" id="imp">
-                        <input type="submit" name="login" value="Sign In" id="b1" class="b1">
+                        <input type="text" name="username" id="imp"><br><br>
+                        <label align="left">Email</label><br>
+                        <input type="email" name="email" id="imp"><br><br>
+                        <label align="left">Password</label><br>
+                        <input type="password" name="password" id="imp"><br><br>
+                        <label align="left">Confirm Password</label><br>
+                        <input type="password" name="confirmPassword" id="imp"><br>
+                        <input type="submit" name="register" value="Sign Up" id="b1" class="b1" style="top:85%;">
                         <div class="error-message" style="color:lightgray;"><?php if(isset($message)) { echo $message; } ?></div>
                     </form>
                 </div>

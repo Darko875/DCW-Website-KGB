@@ -1,16 +1,22 @@
-CREATE DATABASE sist_reserva;
+CREATE DATABASE sistreserva;
 
-use sist_reserva;
+use sistreserva;
+
+CREATE TABLE user(
+    uid int PRIMARY KEY AUTO_INCREMENT,
+    user varchar(20) not null,
+    email varchar(120) UNIQUE NOT NULL,
+    password varchar(100) Not NULL
+)
 
 CREATE TABLE hospede(
 nid int PRIMARY Key NOT NULL AUTO_INCREMENT,
 nome varchar(30) NOT NULL,
 data_nascimento date NOT NULL,
 nacionalidade varchar(25) NOT NULL,
-cidade varchar(40) NOT NULL,
-email varchar(80) NOT NULL,
 n_cont int NOT NULL,
-password varchar(32) NOT NULL
+uid int,
+FOREIGN KEY (uid) REFERENCES user(uid) ON DELETE CASCADE
 );
 
 CREATE TABLE imovel(
@@ -20,27 +26,18 @@ tipologia varchar(10) NOT NULL,
 preco real NOT NULL,
 descricao char(200) NOT NULL,
 cidade_im varchar(80) NOT NULL,
-image longblob NOT NULL);
+image varchar(255) NOT NULL);
 
 CREATE TABLE reserva(
 idf int PRIMARY Key NOT NULL AUTO_INCREMENT,
 data_entrada datetime NOT NULL,
 data_saida datetime NOT NULL,
 npessoas int NOT NULL, 
-nid int NOT NULL,
+uid int NOT NULL,
 idc int NOT NULL,
-FOREIGN KEY (nid) REFERENCES hospede(nid) ON DELETE CASCADE,
-FOREIGN KEY (idc) REFERENCES imovel(idc) ON DELETE CASCADE);
+FOREIGN kEY (uid) REFERENCES user(uid) ON DELETE CASCADE,
+FOREIGN kEY (idc) REFERENCES imovel(idc) ON DELETE CASCADE);
 
-
-CREATE TABLE hosp_cont(
-idh INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome varchar(30) NOT NULL,
-email varchar(80) NOT NULL,
-n_cont int NOT NULL,
-idf int,
-FOREIGN KEY (idf) REFERENCES reserva(idf) ON DELETE CASCADE
-);
 insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) values (1, 'Apartamento', 'T0', '200.86', 'hhusdahudhauhsd', 'Smilavichy', 'http://dummyimage.com/179x108.jpg/cc0000/ffffff');
 insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) values (2, 'Apartamento', 'T1', '600.00', 'adhasdhasudhausdha', 'Shōbara', 'http://dummyimage.com/179x108.jpg/cc0000/ffffff');
 insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) values (3, 'Apartamento', 'T2', '500.86', 'adsasdasdasdasda', 'San Martin', 'http://dummyimage.com/179x108.jpg/cc0000/ffffff');

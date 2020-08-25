@@ -1,3 +1,20 @@
+<?php
+    include_once('dbFunction.php');  
+       
+    $funObj = new dbFunction();  
+    if(isset($_POST['login'])){  
+        $email = $_POST['email'];  
+        $password = $_POST['password'];  
+        $user = $funObj->Login($email, $password);  
+        if ($user) {  
+            // Login Success  
+           header("location:imoveis.php");  
+        } else {  
+            // Login Failed  
+            echo "<script>alert('Email / Password Not Match')</script>";  
+        }  
+    }  
+?>
 <!DOCTYPE html>
     <html>
     <head>
@@ -28,14 +45,13 @@
                 border: 1px solid #000000;
                 max-width: 1100px;" align="center"/>
                 <div class="black-block">
-                    <form action="valida.php" method="post" id="frmLogin" >
+                    <form action="" method="post" id="frmLogin" name="login">
                         <h2 class="form-titulo">Login</h2><br><br><br>
                         <label align="left">Email</label><br><br>
                         <input type="text" name="email" id="imp"><br><br>
                         <label align="left">Password</label><br><br>
-                        <input type="text" name="password" id="imp">
+                        <input type="password" name="password" id="imp">
                         <input type="submit" name="login" value="Sign In" id="b1" class="b1">
-                        <div class="error-message" style="color:lightgray;"><?php if(isset($message)) { echo $message; } ?></div>
                     </form>
                 </div>
             </div>
