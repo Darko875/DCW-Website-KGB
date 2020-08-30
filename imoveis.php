@@ -1,65 +1,51 @@
 <?php 
 session_start();
 ?>
+	////<?php 
+	////include_once("connect.php");
+	////$consult =  "SELECT * FROM imovel";
+	////$consulta2 = mysqli_query($conn, $consult);
+	/////?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Imóveis</title>
-	<link rel="stylesheet" href="main5.css">
-	<?php 
-	include_once("connect.php");
-	$consult =  "SELECT * FROM imovel";
-	$consulta2 = mysqli_query($conn, $consult);
-	?>
-	<link rel="stylesheet" href="main3.css">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./styles/imoveis.css">
 </head>
 <body>
-	<div class="cabecalho">
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="index.php">Home</a></li><!--
-                 --><li><a href="index.php#901">Serviços</a></li><!--
-                 --><li><a href="index.php#902">Perfil</a></li><!--
-                 --><li><a href="index.php#903">Ofertas</a></li><!--
-                 --><li><a href="index.php#904">Informações</a></li><!--
-                 --><li><a href="perfil.php">Perfil</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="container" align="center">
-		<table align="center" style="border-spacing: 5px; border: 2px solid lightgray; border-collapse: collapse;">
-			<caption style="color:lightgray;" align="center">Imóveis</caption>
-			<tbody style="color:lightgray;" align="center">
-				<tr>
-					<td>Código do Imóvel</td>
-					<td>Tipo</td>
-					<td>Tipologia</td>
-					<td>Preço</td>
-					<td>Descrição</td>
-					<td>Cidade</td>
-					<td>Imagem</td>
-					<td>Calendário</td>
-				</tr>
-			</tbody>
-			<tbody>
-				<?php while($row = mysqli_fetch_assoc($consulta2)) { ?>
-				<tr style="padding: 15px;">
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['idc']; ?></td>
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['tipo']; ?></td>
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['tipologia']; ?></td>
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['preco']. " $";?></td>
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['descricao']; ?></td>
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><?php echo $row['cidade_im']; ?></td>
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><img src="<?php echo $row['image']; ?>"></td>
-					<td style="color:lightgray; padding: 15px; border: 1px solid"><a href=" calendario<?php echo $row['idc']; ?>.php"><button class="css3button"><?php echo "Calendário ". $row['idc']; ?></button></a></td>
-				</tr>
-			<?php  } ?>
-			</tbody>
-		</table>
+<div class="container" align="center">
+	<div class="header" align="center">
+		<div class="headerMenu" align="center">
+				<a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 10px; padding: 0; "/></a>
+				<div class="menu">
+					<nav>
+						<ul>
+							<li><a href="#">Managers</a></li>
+							<li><a href="#">Guests</a></li>
+						</ul>
+					</nav>
+				</div>
+		</div>
 	</div>
+		
+	<div class="white-block">
+		<div class="grid">
+			<ul>
+				<li>
+					<img src="./assets/home_asset.jpg" alt="home_image" style="width: 500px; height: 200px; filter: blur(4px);
+					box-sizing: border-box;
+					box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+					mix-blend-mode: luminosity;
+					border: 1px solid #000000;
+					max-width: 1100px;" align="center"/>
+					<strong>Imóvel</strong>
+					<p>Detalhes</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>      
 </body>
 </html>
