@@ -13,15 +13,21 @@ session_start();
         function __destruct() {  
               
         }  
+
+        public function connect(){
+            $con = mysqli_connect(server, user, password, db);
+            return $con;
+        }
+
         public function UserRegister($user, $email, $password){
-                $conn = mysqli_connect(server, user, password, db);   
+                $conn = $this->connect();  
                 $password = md5($password);  
                 $qr = mysqli_query($conn, "INSERT INTO user(user, email, password) values('".$user."','".$email."','".$password."')") or die(mysqli_error($conn));  
                 return $qr;  
                
         }  
         public function Login($email, $password){  
-            $conn = mysqli_connect(server, user, password, db); 
+            $conn = $this->connect(); 
             $res = mysqli_query($conn,"SELECT * FROM user WHERE email = '".$email."' AND password = '".md5($password)."'");  
             $user_data = mysqli_fetch_array($res);  
             //print_r($user_data);  
@@ -41,6 +47,26 @@ session_start();
                 return FALSE;  
             }  
         }  
-        
+
+        public function imoveis(){
+            $conn = $this->connect(); 
+            $res = mysqli_query($conn,"SELECT * FROM imovel"); 
+            ?>
+            <?php while($dado = mysqli_fetch_assoc($res)) { ?>
+				<li>
+					<img src=<?php echo $dado['image'] ?> alt="home_image" style="width: 280px; height: 200px; 
+					max-width: 1100px;" align="center"/>
+					<strong><?php echo $dado['tipo'], $dado['tipologia'] ?></strong>
+					<p>Detalhes</p>
+				</li>
+			<?php } ?>
+            <?php
+        }
+
+        public function userName(){
+               ?> 
+            <li>Bem vindo, <?php echo $_SESSION['username'] ?></li>
+            <?php
+        }
     }  
 ?>  
