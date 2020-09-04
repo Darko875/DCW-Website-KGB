@@ -13,7 +13,7 @@ CREATE TABLE hospede(
 nid int PRIMARY Key NOT NULL AUTO_INCREMENT,
 nome varchar(30) NOT NULL,
 data_nascimento date NOT NULL,
-nacionalidade varchar(25) NOT NULL,
+nacionalidade varchar(30) NOT NULL,
 n_cont int NOT NULL,
 uid int,
 FOREIGN KEY (uid) REFERENCES user(uid) ON DELETE CASCADE
