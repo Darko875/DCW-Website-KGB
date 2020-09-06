@@ -14,9 +14,7 @@ nid int PRIMARY Key NOT NULL AUTO_INCREMENT,
 nome varchar(30) NOT NULL,
 data_nascimento date NOT NULL,
 nacionalidade varchar(30) NOT NULL,
-n_cont int NOT NULL,
-uid int,
-FOREIGN KEY (uid) REFERENCES user(uid) ON DELETE CASCADE
+n_cont int NOT NULL
 );
 
 CREATE TABLE imovel(
@@ -35,8 +33,11 @@ data_saida datetime NOT NULL,
 npessoas int NOT NULL, 
 uid int NOT NULL,
 idc int NOT NULL,
+nid int NOT NULL,
 FOREIGN kEY (uid) REFERENCES user(uid) ON DELETE CASCADE,
-FOREIGN kEY (idc) REFERENCES imovel(idc) ON DELETE CASCADE);
+FOREIGN kEY (idc) REFERENCES imovel(idc) ON DELETE CASCADE,
+FOREIGN kEY (nid) REFERENCES hospede(nid) ON DELETE CASCADE
+);
 
 insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) values (1, 'Apartamento', 'T0', '200.86', 'hhusdahudhauhsd', 'Smilavichy', 'http://dummyimage.com/179x108.jpg/cc0000/ffffff');
 insert into imovel (idc, tipo, tipologia, preco, descricao, cidade_im, image) values (2, 'Apartamento', 'T1', '600.00', 'adhasdhasudhausdha', 'Shōbara', 'http://dummyimage.com/179x108.jpg/cc0000/ffffff');

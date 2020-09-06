@@ -37,7 +37,7 @@ session_start();
             {  
            
                 $_SESSION['login'] = true;  
-                $_SESSION['uid'] = $user_data['id'];  
+                $_SESSION['uid'] = $user_data['uid'];  
                 $_SESSION['username'] = $user_data['user'];  
                 $_SESSION['email'] = $user_data['email'];  
                 return TRUE;  
@@ -68,5 +68,33 @@ session_start();
             <li>Bem vindo, <?php echo $_SESSION['username'] ?></li>
             <?php
         }
+
+        public function imoveisReserva(){
+            $conn = $this->connect(); 
+            $res = mysqli_query($conn,"SELECT * FROM imovel");
+            ?>
+            <?php while($dado = mysqli_fetch_assoc($res)) { ?>
+                <option value= <?php echo $dado['idc']?>><?php echo $dado['tipo'], $dado['tipologia'] ?></option>
+            <?php } ?>
+            <?php
+        }
+        
+        public function reservaRegister($dataEntrada, $dataSaida, $nPessoas, $hostel){
+            $conn = $this->connect();
+            $uid = $_SESSION['uid'];
+            $hosp = mysqli_query($conn, "SELECT * FROM hospede WHERE nid = (SELECT max(nid) FROM hospede)") or die(mysqli_error($conn));   
+            $res =  mysqli_fetch_assoc($hosp);
+            $qr = mysqli_query($conn, "INSERT INTO reserva(data_entrada, data_saida, npessoas, uid, idc, nid) values('".$dataEntrada."','".$dataSaida."','".$nPessoas."', '".$uid."', '".$hostel."', '".$res['nid']."')") or die(mysqli_error($conn));  
+            return $qr;  
+           
+        }
+
+        public function reservaHosp($nome, $dataNascimento, $nacionalidade, $nCont){
+            $conn = $this->connect();
+            $qr = mysqli_query($conn, "INSERT INTO hospede(nome, data_nascimento, nacionalidade, n_cont) values('".$nome."','".$dataNascimento."','".$nacionalidade."', '".$nCont."')") or die(mysqli_error($conn));  
+            return $qr;  
+           
+        }
+        
     }  
 ?>  

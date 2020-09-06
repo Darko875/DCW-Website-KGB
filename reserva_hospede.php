@@ -4,29 +4,25 @@
        
     $funObj = new dbFunction();  
 
-if($_POST['register']){  
-    $username = $_POST['username'];  
-    $email = $_POST['email'];  
-    $password = $_POST['password'];  
-    $confirmPassword = $_POST['confirmPassword'];  
-    if($password == $confirmPassword){   
-        $register = $funObj->UserRegister($username, $email, $password);  
-        if($register){  
-                echo "<script>alert('Registration Successful')</script>";  
+if($_POST['reserva']){  
+    $nome = $_POST['nome'];  
+    $dataNascimento = $_POST['data_nascimento'];  
+    $nacionalidade = $_POST['nacionalidade'];  
+	$nCont = $_POST['n_contribuinte'];  
+	$reserva = $funObj->reservaHosp($nome, $dataNascimento, $nacionalidade, $nCont);  
+        if($reserva){  
+                echo "<script>alert('Hóspede adicionado')</script>"; 
+                header("Location: reserva.php"); 
         }else{  
-            echo "<script>alert('Registration Not Successful')</script>";  
-        }  
-    } else {  
-        echo "<script>alert('Password Not Match')</script>";  
-      
-    }  
+            echo "<script>alert('Hóspede não adicionado')</script>";  
+        } 
 }  
 
 ?>
 <!DOCTYPE html>
     <html>
     <head>
-        <title>Registo de Utilizador</title>
+        <title>Reserva</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./styles/register.css">
     </head>
@@ -53,17 +49,17 @@ if($_POST['register']){
                 border: 1px solid #000000;
                 max-width: 1100px;" align="center"/>
                 <div class="black-block">
-                    <form action="" method="post" id="frmLogin" name="register">
-                        <h2 class="form-titulo">Register</h2><br>
-                        <label>Username</label><br>
-                        <input type="text" name="username" id="imp"><br><br>
-                        <label align="left">Email</label><br>
-                        <input type="email" name="email" id="imp"><br><br>
-                        <label align="left">Password</label><br>
-                        <input type="password" name="password" id="imp"><br><br>
-                        <label align="left">Confirm Password</label><br>
-                        <input type="password" name="confirmPassword" id="imp"><br>
-                        <input type="submit" name="register" value="Sign Up" id="b1" class="b1" style="top:85%;">
+                    <form action="" method="post" id="frmLogin" name="reserva">
+                        <h2 class="form-titulo">Hóspede</h2><br>
+                        <label>Nome</label><br>
+                        <input type="text" name="nome" id="imp"><br><br>
+                        <label align="left">Data de Nascimento</label><br>
+                        <input type="date" name="data_nascimento" id="imp"><br><br>
+                        <label align="left">Nacionalidade</label><br>
+                        <input type="text" name="nacionalidade" id="imp"><br><br>
+                        <label align="left">Nº de Contribuinte</label><br>
+                        <input type="text" name="n_contribuinte" id="imp">
+                        <input type="submit" name="reserva" value="Reserva" id="b1" class="b1" style="top:85%;">
                         <div class="error-message" style="color:lightgray;"><?php if(isset($message)) { echo $message; } ?></div>
                     </form>
                 </div>

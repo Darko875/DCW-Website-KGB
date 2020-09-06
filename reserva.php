@@ -1,57 +1,71 @@
 <?php 
-session_start();
-include_once("connect.php");
+    
+    include_once('dbFunction.php');  
+       
+    $funObj = new dbFunction();  
+
+if($_POST['reserva']){  
+	$dataEntrada = $_POST['data_entrada'];  
+    $dataSaida = $_POST['data_saida'];  
+    $nPessoas = $_POST['npessoas'];  
+	$hostel = $_POST['hostel'];  
+	$reserva = $funObj->reservaRegister($dataEntrada, $dataSaida, $nPessoas, $hostel);  
+        if($reserva){  
+                echo "<script>alert('Reserva Successful')</script>";  
+        }else{  
+            echo "<script>alert('Reserva Not Successful')</script>";  
+        }
+}  
+
 ?>
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Reservas</title>
-	<link rel="stylesheet" href="main3.css">
-</head>
-<body>
-	<div class="cabecalho">
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li><!--
-                 --><li><a href="index.php#901">Serviços</a></li><!--
-                 --><li><a href="index.php#902">Perfil</a></li><!--
-                 --><li><a href="index.php#903">Ofertas</a></li><!--
-                 --><li><a href="index.php#904">Informações</a></li><!--
-                 --><li><a href="perfil.php">Perfil</a></li>
-                </ul>
-            </nav>
+    <html>
+    <head>
+        <title>Reserva</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles/register.css">
+    </head>
+    <body>
+    <div class="container" align="center">
+        <div class="header" align="center">
+            <div class="headerMenu" align="center">
+                    <a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 10px; padding: 0; "/></a>
+                    <div class="menu">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Managers</a></li>
+                                <li><a href="#">Guests</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="headImg">
+                <img src="./assets/home_asset.jpg" alt="home_image" style="width: 1100px; height: 618.75; filter: blur(4px);
+                box-sizing: border-box;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                mix-blend-mode: luminosity;
+                border: 1px solid #000000;
+                max-width: 1100px;" align="center"/>
+                <div class="black-block">
+                    <form action="" method="post" id="frmLogin" name="reserva">
+                        <h2 class="form-titulo">Reserva</h2><br>
+                        <label>Data de Entrada</label><br>
+                        <input type="date" name="data_entrada" id="imp"><br><br>
+                        <label align="left">Data de Saída</label><br>
+                        <input type="date" name="data_saida" id="imp"><br><br>
+                        <label align="left">Nº de pessoas</label><br>
+                        <input type="number" name="npessoas" id="imp"><br><br>
+                        <label align="left">Hostel</label><br>
+                        <select name="hostel" id="imp">
+						<?php $funObj->imoveisReserva(); ?>
+						</select> <br>
+                        <input type="submit" name="reserva" value="Reserva" id="b1" class="b1" style="top:85%;">
+                        <div class="error-message" style="color:lightgray;"><?php if(isset($message)) { echo $message; } ?></div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-	<form action="processa3.php" method="post" accept-charset="utf-8">
-		<h2 class="form-titulo">Reservas</h2>
-		<label style="color:lightgray;">	
-		<?php 
-            if (isset($_SESSION['msg2'])){
-                echo $_SESSION['msg2'];
-                unset($_SESSION['msg2']); 
-            }
-        ?>
-    	</label><br>
-        <label style="color:lightgray;">
-        Data de Entrada:
-		<input type="date" name="data_entrada">
-		</label>
-		<label style="color:lightgray;">
-		Data de Saída:
-		<input type="date" name="data_saida">
-		</label>
-		<label style="color:lightgray;">
-		Nº de Pessoas:
-		<input type="number" name="npessoas">
-		</label>
-		<label style="color:lightgray;">
-		Código de Imóvel:
-		<input type="number" name="idc">
-		</label>
-		<input type="submit" name="enviar" id="butao">
-	</form>
-</body>
-</html>
+    </div>      
+    </body>
+    </html>

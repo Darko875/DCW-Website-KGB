@@ -18,7 +18,7 @@
 <!DOCTYPE html>
     <html>
     <head>
-        <title>Formulário de Login</title>
+        <title>Login</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="./styles/login.css">
     </head>
