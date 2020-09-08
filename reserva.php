@@ -10,11 +10,6 @@ if($_POST['reserva']){
     $nPessoas = $_POST['npessoas'];  
 	$hostel = $_POST['hostel'];  
 	$reserva = $funObj->reservaRegister($dataEntrada, $dataSaida, $nPessoas, $hostel);  
-        if($reserva){  
-                echo "<script>alert('Reserva Successful')</script>";  
-        }else{  
-            echo "<script>alert('Reserva Not Successful')</script>";  
-        }
 }  
 
 ?>

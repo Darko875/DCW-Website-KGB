@@ -81,20 +81,44 @@ session_start();
         
         public function reservaRegister($dataEntrada, $dataSaida, $nPessoas, $hostel){
             $conn = $this->connect();
-            $uid = $_SESSION['uid'];
-            $hosp = mysqli_query($conn, "SELECT * FROM hospede WHERE nid = (SELECT max(nid) FROM hospede)") or die(mysqli_error($conn));   
-            $res =  mysqli_fetch_assoc($hosp);
-            $qr = mysqli_query($conn, "INSERT INTO reserva(data_entrada, data_saida, npessoas, uid, idc, nid) values('".$dataEntrada."','".$dataSaida."','".$nPessoas."', '".$uid."', '".$hostel."', '".$res['nid']."')") or die(mysqli_error($conn));  
-            return $qr;  
+            $qrs = "SELECT * FROM reserva 
+	        WHERE data_entrada >= '$dataEntrada'
+	        AND data_saida <= '$dataSaida'
+	        AND idc = $hostel";
+
+            $res = mysqli_query($conn, $qrs);
+            $no_rows = mysqli_num_rows($res);  
+            
+            if($no_rows === 0){
+                $uid = $_SESSION['uid'];
+                $hosp = mysqli_query($conn, "SELECT * FROM hospede WHERE nid = (SELECT max(nid) FROM hospede WHERE uid = $uid) ") or die(mysqli_error($conn));   
+                $res = mysqli_fetch_assoc($hosp);
+                $rows = mysqli_num_rows($hosp); 
+                if($rows > 0){
+                    $qr = mysqli_query($conn, "INSERT INTO reserva(data_entrada, data_saida, npessoas, uid, idc, nid) values('".$dataEntrada."','".$dataSaida."','".$nPessoas."', '".$uid."', '".$hostel."', '".$res['nid']."')") or die(mysqli_error($conn));
+                    echo "<script>alert('Reserva Successful $rows $no_rows')</script>";
+                    return $qr;
+                }else{
+                    echo "<script>alert('Reserva is shit')</script>";
+                }
+            }
+            else {
+                header("Location: imoveis.php");
+            }
+            
+            
+              
            
         }
 
         public function reservaHosp($nome, $dataNascimento, $nacionalidade, $nCont){
             $conn = $this->connect();
-            $qr = mysqli_query($conn, "INSERT INTO hospede(nome, data_nascimento, nacionalidade, n_cont) values('".$nome."','".$dataNascimento."','".$nacionalidade."', '".$nCont."')") or die(mysqli_error($conn));  
+            $uid = $_SESSION['uid'];
+            $qr = mysqli_query($conn, "INSERT INTO hospede(nome, data_nascimento, nacionalidade, n_cont, uid) values('".$nome."','".$dataNascimento."','".$nacionalidade."', '".$nCont."', '".$uid."')") or die(mysqli_error($conn));  
             return $qr;  
            
         }
+        
         
     }  
 ?>  
