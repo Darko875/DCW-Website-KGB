@@ -33,9 +33,17 @@ include_once('dbFunction.php');
 		
 	<div class="white-block">
 		<div class="grid">
-			<ul>
-				<?php $funObj->imoveis(); ?>
-			</ul>
+            <table>
+                <tr>
+                    <td>Nº de Reserva</td>
+                    <td>Data de Entrada</td>
+                    <td>Data de Saída</td>
+                    <td>Nº de Pessoas</td>
+                    <td>Hóspede Responsável</td>
+                    <td>Hostel</td>
+                </tr>
+                <?php $funObj->resPage(); ?>
+            </table>
 		</div>
 	</div>
 </div>      

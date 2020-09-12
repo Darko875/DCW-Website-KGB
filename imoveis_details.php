@@ -33,9 +33,17 @@ include_once('dbFunction.php');
 		
 	<div class="white-block">
 		<div class="grid">
-			<ul>
-				<?php $funObj->imoveis(); ?>
-			</ul>
+            <table>
+                <tr>
+                    <td></td>
+                    <td>Tipo</td>
+                    <td>Tipologia</td>
+                    <td>Cidade</td>
+                    <td>Descrição</td>
+                    <td>Preço</td>
+                </tr>
+                <?php $funObj->imvDetails(); ?>
+            </table>
 		</div>
 	</div>
 </div>      

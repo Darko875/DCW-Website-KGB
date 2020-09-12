@@ -56,8 +56,8 @@ session_start();
 				<li>
 					<img src=<?php echo $dado['image'] ?> alt="home_image" style="width: 280px; height: 200px; 
 					max-width: 1100px;" align="center"/>
-					<strong><?php echo $dado['tipo'], $dado['tipologia'] ?></strong>
-					<p>Detalhes</p>
+					<strong><?php echo $dado['tipo'], " ", $dado['tipologia'], " ", $dado['cidade_im'] ?></strong>
+					<p><a href="imoveis_details.php?id=<?php echo $dado['idc'] ?>" >Detalhes</a></p>
 				</li>
 			<?php } ?>
             <?php
@@ -119,6 +119,117 @@ session_start();
            
         }
         
+        public function resPage(){
+            $conn = $this->connect();
+            $uid = $_SESSION['uid'];
+            $qr = mysqli_query($conn, "SELECT r.idf, r.data_entrada, r.data_saida, r.npessoas, h.nome, i.cidade_im, i.tipo, i.tipologia FROM reserva r, hospede h, imovel i WHERE r.nid = h.nid AND r.idc = i.idc AND r.uid = $uid") or die(mysqli_error($conn));  
+            
+            ?>
+            <?php while($dado = mysqli_fetch_assoc($qr)) { ?>
+                <tr>
+                    <td><?php echo $dado['idf'] ?></td>
+                    <td><?php echo $dado['data_entrada'] ?></td>
+                    <td><?php echo $dado['data_saida'] ?></td>
+                    <td><?php echo $dado['npessoas'] ?></td>
+                    <td><?php echo $dado['nome'] ?></td>
+                    <td><?php echo $dado['tipo'], $dado['tipologia'], $dado['cidade_im'] ?></td>
+                    <td><a href="reserva_details.php?id=<?php echo $dado['idf'] ?>" >Detalhes</a></td>
+                    <td><a href="reserva_details.php?id=<?php echo $dado['idf'] ?>" >Remover</a></td>
+                </tr>
+            <?php } ?>
+            <?php
+        }
+        public function resHosp(){
+            if($_GET['id']){
+                $conn = $this->connect();
+                $uid = $_SESSION['uid'];
+                $idf = $_GET['id'];
+                $hosp = mysqli_query($conn, "SELECT h.nome, h.data_nascimento, h.nacionalidade, h.n_cont FROM hospede h, reserva r WHERE idf = $idf AND r.uid = h.uid AND r.nid = h.nid ") or die(mysqli_error($conn));
         
+                ?>
+                <?php while($dado = mysqli_fetch_assoc($hosp)) { ?>
+                    <tr>
+                        <td><?php echo $dado['nome'] ?></td>
+                        <td><?php echo $dado['data_nascimento'] ?></td>
+                        <td><?php echo $dado['nacionalidade'] ?></td>
+                        <td><?php echo $dado['n_cont'] ?></td>
+                    </tr>
+                <?php } ?>
+                <?php
+            }else{
+                echo "<script>alert('Servidor não disponivel!')</script>";
+            }
+        }
+        public function resImv(){
+            if($_GET['id']){
+                $conn = $this->connect();
+                $uid = $_SESSION['uid'];
+                $idf = $_GET['id'];
+                $imv = mysqli_query($conn, "SELECT i.tipo, i.tipologia, i.cidade_im, i.image, i.idc FROM imovel i, reserva r WHERE idf = $idf AND r.idc = i.idc ") or die(mysqli_error($conn));
+                
+
+                ?>
+                <?php while($dado = mysqli_fetch_assoc($imv)) { ?>
+                    <tr>
+                        <td><img src=<?php echo $dado['image'] ?> alt="home_image" style="width: 280px; height: 200px; 
+					max-width: 1100px;" align="center"/></td>
+                        <td><?php echo $dado['tipo'] ?></td>
+                        <td><?php echo $dado['tipologia'] ?></td>
+                        <td><?php echo $dado['cidade_im'] ?></td>
+                           
+                    </tr>
+                <?php } ?>
+                <?php
+            }else{
+                echo "<script>alert('Servidor não disponivel!')</script>";
+            }
+        }
+        public function resDetails(){
+            if($_GET['id']){
+                $conn = $this->connect();
+                $uid = $_SESSION['uid'];
+                $idf = $_GET['id'];
+                $qr = mysqli_query($conn, "SELECT idf, data_entrada, data_saida, npessoas  FROM reserva WHERE idf = $idf ") or die(mysqli_error($conn));
+
+                ?>
+                <?php while($dado = mysqli_fetch_assoc($qr)) { ?>
+                    <tr>
+                        <td><?php echo $dado['idf'] ?></td>
+                        <td><?php echo $dado['data_entrada'] ?></td>
+                        <td><?php echo $dado['data_saida'] ?></td>
+                        <td><?php echo $dado['npessoas'] ?></td>
+                    </tr>
+                <?php } ?>
+                <?php
+            }else{
+                echo "<script>alert('Servidor não disponivel!')</script>";
+            }
+        }
+
+        public function imvDetails(){
+            if($_GET['id']){
+                $conn = $this->connect();
+                $idc = $_GET['id'];
+                $imv = mysqli_query($conn, "SELECT * FROM imovel WHERE idc = $idc ") or die(mysqli_error($conn));
+                
+
+                ?>
+                <?php while($dado = mysqli_fetch_assoc($imv)) { ?>
+                    <tr>
+                        <td><img src=<?php echo $dado['image'] ?> alt="home_image" style="width: 280px; height: 200px; 
+					max-width: 1100px;" align="center"/></td>
+                        <td><?php echo $dado['tipo'] ?></td>
+                        <td><?php echo $dado['tipologia'] ?></td>
+                        <td><?php echo $dado['cidade_im'] ?></td>
+                        <td><?php echo $dado['descricao'] ?></td>
+                        <td><?php echo $dado['preco'] ?></td>
+                           
+                    </tr>
+                <?php } ?>
+                <?php
+            }else{
+                echo "<script>alert('Servidor não disponivel!')</script>";
+            }        
+        }
     }  
 ?>  
