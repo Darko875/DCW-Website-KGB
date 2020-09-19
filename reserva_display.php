@@ -3,28 +3,39 @@ include_once('dbFunction.php');
 
 	$funObj = new dbFunction();  
 
-	  
+	if(isset($_GET['idr'])){
+        $funObj->imvRmv(); 
+        header("location:reserva_display.php");
+    }else{
+        
+        
+    }      
+
+    if(isset($_POST['logout'])){ 
+		$funObj->logout();
+	}	
+	if(!($_SESSION)){  
+		header("Location:index.php");  
+	}
        
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Imóveis</title>
+	<title>Reservas</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="./styles/imoveis.css">
+	<link rel="stylesheet" href="./styles/stylesheet.css">
 </head>
 <body>
 <div class="container" align="center">
 	<div class="header" align="center">
 		<div class="headerMenu" align="center">
-				<a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 8px; padding: 0; "/></a>
+				<a href="index.php"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 8px; padding: 0; "/></a>
 				<div class="menu">
 					<nav>
 						<ul>
-							<?php $funObj->userName() ?>
-							<li><a href="#">Managers</a></li>
-							<li><a href="#">Guests</a></li>
+							<?php $funObj->menuType5();?>
 						</ul>
 					</nav>
 				</div>
@@ -32,15 +43,16 @@ include_once('dbFunction.php');
 	</div>
 		
 	<div class="white-block">
-		<div class="grid">
+		<div class="black-block">
+            <h2>Reservas</h2>
             <table>
                 <tr>
-                    <td>Nº de Reserva</td>
-                    <td>Data de Entrada</td>
-                    <td>Data de Saída</td>
-                    <td>Nº de Pessoas</td>
-                    <td>Hóspede Responsável</td>
-                    <td>Hostel</td>
+                    <th class="black-list">Nº de Reserva</th>
+                    <th class="black-list">Data de Entrada</th>
+                    <th class="black-list">Data de Saída</th>
+                    <th class="black-list">Nº de Pessoas</th>
+                    <th class="black-list">Hóspede Responsável</th>
+                    <th class="black-list">Hostel</th>
                 </tr>
                 <?php $funObj->resPage(); ?>
             </table>

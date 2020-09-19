@@ -3,63 +3,55 @@ include_once('dbFunction.php');
 
 	$funObj = new dbFunction();  
 
-	  
+    if(isset($_POST['logout'])){ 
+		$funObj->logout();
+	}	
+	if(!($_SESSION)){  
+		header("Location:index.php");  
+	}
+	
        
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Imóveis</title>
+	<title>Detalhes da Reserva</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="./styles/imoveis.css">
+	<link rel="stylesheet" href="./styles/stylesheet2.css">
 </head>
 <body>
 <div class="container" align="center">
 	<div class="header" align="center">
 		<div class="headerMenu" align="center">
-				<a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 8px; padding: 0; "/></a>
+				<a href="index.php"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 8px; padding: 0; "/></a>
 				<div class="menu">
 					<nav>
 						<ul>
-							<?php $funObj->userName() ?>
-							<li><a href="#">Managers</a></li>
-							<li><a href="#">Guests</a></li>
+                            <?php $funObj->menuType5();?>
 						</ul>
 					</nav>
 				</div>
 		</div>
 	</div>
 		
-	<div class="white-block">
-		<div class="grid">
-            <table>
-                <tr>
-                    <td></td>
-                    <td>Tipo</td>
-                    <td>Tipologia</td>
-                    <td>Cidade</td>
-                </tr>
+	<div class="white-block" align="center">
+		<div class="black-block" align="center">
+            <ul align="center">
                 <?php $funObj->resImv(); ?>
-            </table>
-            <table>
-                <tr>
-                    <td>Nome do hóspede</td>
-                    <td>Data de Nascimento</td>
-                    <td>Nacionalidade</td>
-                    <td>Nº de Contribuinte</td>
-                </tr>
+            </ul>  
+            <ul align="center">    
+                <br><br>
+                <h3>Dados do Hóspede Responsável</h3>
+                <br><br>
                 <?php $funObj->resHosp(); ?>
-            </table>
-            <table>
-                <tr>
-                    <td>Código da Reserva</td>
-                    <td>Data de Entrada</td>
-                    <td>Data de Saída</td>
-                    <td>Nº de Pessoas</td>
-                </tr>
+            </ul>
+            <ul align="center">  
+                <br><br>  
+                <h3>Dados da Marcação</h3>
+                <br><br>
                 <?php $funObj->resDetails(); ?>
-            </table>
+            </ul>
 		</div>
 	</div>
 </div>      

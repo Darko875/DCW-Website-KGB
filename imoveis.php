@@ -3,14 +3,19 @@ include_once('dbFunction.php');
 
 	$funObj = new dbFunction();  
 
-	  
+	if(isset($_POST['logout'])){ 
+		$funObj->logout();
+	}	
+	if(!($_SESSION)){  
+		header("Location:index.php");  
+	} 
        
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Imóveis</title>
+	<title>Hostels</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="./styles/imoveis.css">
 </head>
@@ -18,13 +23,11 @@ include_once('dbFunction.php');
 <div class="container" align="center">
 	<div class="header" align="center">
 		<div class="headerMenu" align="center">
-				<a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 8px; padding: 0; "/></a>
+				<a href="index.php"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 8px; padding: 0; "/></a>
 				<div class="menu">
 					<nav>
 						<ul>
-							<?php $funObj->userName() ?>
-							<li><a href="#">Managers</a></li>
-							<li><a href="#">Guests</a></li>
+							<?php $funObj->menuType2();?>
 						</ul>
 					</nav>
 				</div>
@@ -36,6 +39,7 @@ include_once('dbFunction.php');
 			<ul>
 				<?php $funObj->imoveis(); ?>
 			</ul>
+			<br><br>
 		</div>
 	</div>
 </div>      

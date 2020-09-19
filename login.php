@@ -13,7 +13,8 @@
             // Login Failed  
             echo "<script>alert('Email / Password Not Match')</script>";  
         }  
-    }  
+    } 
+    
 ?>
 <!DOCTYPE html>
     <html>
@@ -26,12 +27,11 @@
     <div class="container" align="center">
         <div class="header" align="center">
             <div class="headerMenu" align="center">
-                    <a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 10px; padding: 0; "/></a>
+                    <a href="index.php"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 10px; padding: 0; "/></a>
                     <div class="menu">
                         <nav>
                             <ul>
-                                <li><a href="#">Managers</a></li>
-                                <li><a href="#">Guests</a></li>
+                                <?php $funObj->menuTypeL1();?>
                             </ul>
                         </nav>
                     </div>

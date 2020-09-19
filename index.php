@@ -1,3 +1,12 @@
+<?php 
+include_once('dbFunction.php');
+
+	$funObj = new dbFunction();  
+
+	  
+       
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +19,11 @@
     <div class="container" align="center">
         <div class="header" align="center">
             <div class="headerMenu" align="center">
-                <a href="#"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 10px; padding: 0; "/></a>
+                <a href="index.php"><img src="./assets/home_logo.png" alt="logo" style="width: 76px; height: 76px; margin-top: 10px; padding: 0; "/></a>
                 <div class="menu">
                     <nav>
                         <ul>
-                            <li><a href="#124">Guests</a></li>
-                            <li><a href="#123">Services</a></li>
-                            <li><a href="register.php">Register</a></li>
-                            <li><a href="login.php">Login</a></li>
+                            <?php $funObj->menuType1();?>
                         </ul>
                     </nav>
                 </div>
