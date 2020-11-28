@@ -21,7 +21,7 @@ FOREIGN kEY (uid) REFERENCES user(uid) ON DELETE CASCADE
 
 CREATE TABLE imovel(
 idc int PRIMARY Key NOT NULL AUTO_INCREMENT,
-tipo varchar(10) NOT NULL,
+tipo varchar(20) NOT NULL,
 tipologia varchar(10) NOT NULL,
 preco real NOT NULL,
 descricao char(200) NOT NULL,
